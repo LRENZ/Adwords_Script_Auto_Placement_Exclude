@@ -119,14 +119,7 @@ function main () {
   }
 }*/
 
-function executeInSequence (sequentialIds, executeSequentiallyFunc) {
-  Logger.log('Executing in sequence : ' + sequentialIds);
-  sequentialIds.forEach(function (accountId) {
-    var account = MccApp.accounts().withIds([accountId]).get().next();
-    MccApp.select(account);
-    executeSequentiallyFunc();
-  });
-}
+
 
 function main(){
 
